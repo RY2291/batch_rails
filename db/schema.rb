@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2022_02_04_134722) do
   create_table "user_scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "score", default: 0, null: false
-    t.datetime "recived_at", null: false
+    t.datetime "received_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["recived_at"], name: "index_user_scores_on_recived_at"
+    t.index ["received_at"], name: "index_user_scores_on_received_at"
     t.index ["user_id"], name: "index_user_scores_on_user_id"
   end
 
